@@ -89,4 +89,4 @@ Follow the existing pattern in `index.html`:
 
 ## License
 
-This project is created for Offscript Labs. Feel free to modify and use as needed for your business. 
+This project is created for Offscript Labs. Feel free to modify and use as needed for your business. # offscript-labs
