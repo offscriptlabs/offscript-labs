@@ -1,0 +1,70 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.logo-main {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 4.5rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.logo-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #cccccc;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-main {
+        font-size: 3rem;
+    }
+    
+    .logo-sub {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-main {
+        font-size: 2.5rem;
+    }
+    
+    .logo-sub {
+        font-size: 1.2rem;
+    }
+} 
