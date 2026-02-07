@@ -15,8 +15,64 @@
             <span class="logo-main">Offscript</span>
             <span class="logo-sub">Labs</span>
         </div>
+        <button class="login-btn" id="loginBtn">Login</button>
     </div>
 
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2 class="modal-title">Login</h2>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+        </div>
+    </div>
 
+    <script>
+        // Modal functionality
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalOverlay = loginModal.querySelector('.modal-overlay');
+
+        // Open modal
+        loginBtn.addEventListener('click', () => {
+            loginModal.classList.add('modal-open');
+        });
+
+        // Close modal on X button click
+        closeModal.addEventListener('click', () => {
+            loginModal.classList.remove('modal-open');
+        });
+
+        // Close modal on overlay click
+        modalOverlay.addEventListener('click', () => {
+            loginModal.classList.remove('modal-open');
+        });
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && loginModal.classList.contains('modal-open')) {
+                loginModal.classList.remove('modal-open');
+            }
+        });
+
+        // Handle form submission (placeholder)
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log('Login form submitted');
+            // Add actual login logic here
+        });
+    </script>
 </body>
 </html> 
